@@ -1,0 +1,15 @@
+{
+	"oss": [
+		"jenkinsci/artifact-manager-s3-plugin",
+		"jenkinsci/aws-credentials-plugin",
+		"jenkinsci/aws-global-configuration-plugin",
+		"jenkinsci/aws-java-sdk-plugin",
+		"jenkinsci/kubernetes-client-api-plugin",
+		"jenkinsci/kubernetes-credentials-plugin",
+		"jenkinsci/kubernetes-plugin",
+		"jenkinsci/mapdb-api-plugin",
+		"jenkinsci/saml-plugin",
+		"jenkinsci/view-job-filters-plugin"
+	],
+	"cloudbees": []
+}

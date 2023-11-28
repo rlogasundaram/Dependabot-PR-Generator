@@ -1,0 +1,71 @@
+.container {
+    width: 500px;
+    color: #314d3e;
+  }
+  
+  .title {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px;
+  }
+  
+  .textbox {
+    width: 100%;
+    font-size: 12px;
+    margin: 0;
+    padding: 0px 2px;
+  }
+  
+  .textbox:focus {
+    outline: 0;
+    border-color: #66afe9;
+  }
+  img {
+    height: 56px;
+    padding-left: 25px
+  }
+
+  textarea {
+    width: 100%;
+    height: 240px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+  }
+
+  #outputarea {
+    height: 200px;
+    overflow-y: scroll !important;
+    border: 2px solid black;
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .exportButton {
+    float: right;
+    background-color: #4883e1;
+    border: none;
+    color: white;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 30px;
+  }
+
+  
