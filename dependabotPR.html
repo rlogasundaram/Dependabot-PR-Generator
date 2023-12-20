@@ -3,6 +3,7 @@
 <script src="config.js"></script>
 <script id="data" type="application/json" src="gaiaplugins.json"></script>
 
+
 <div class="container">
     <div class="title">Dependabot PR Generator will begin here!</div>
     <div class="row">
@@ -13,13 +14,25 @@
             <img src="assets/loading.gif">
             Generating Dependabot PRs...
         </div>
-        <button class="exportButton" id="exportPRs">Export as word</button>
+        <div>
+            <button class="exportButton" id="exportPRs">Export as word</button>
+            <a href="/viewResultDependabotPR.html" target="_blank">
+                <button class="viewPRsButton" id="viewPRs">View Results</button>
+            </a>
+        </div>
+    </div>
+    <!-- Tab content -->
+    <div class="tab">
+        <button class="tablinks active" id="cloudbeesTab" value="cloudbees">Cloudbees Plugins</button>
+        <button class="tablinks" id="ossTab" value="oss">OSS Plugins</button>
     </div>
 
-
-    
-    <div>
-        <div id="outputarea"></div>
+    <div id="cloudbeesTitle"><h2>Proprietary Plugins</h2></div>
+    <div id="cloudbees" class="tabcontent">
     </div>
-</div>
+
+    <div id="ossTitle"><h2>OSS Plugins</h2></div>
+    <div id="oss" class="tabcontent">
+    </div>
+
 </div>

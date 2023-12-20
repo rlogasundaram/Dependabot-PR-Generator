@@ -1,24 +1,29 @@
 {
-    "name": "Dependabot PR Generator",
-    "version": "0.1.0",
-    "description": "Dependabot PR Generator for proprietary plugins",
-      "web_accessible_resources": [
-        {
-          "resources": [
-            "assets/runner.png",
-            "assets/stop.jpg"
-          ],
-          "matches": ["https://*.google.com/*"]
-        }
+  "name": "Dependabot PR Generator",
+  "version": "0.1.0",
+  "description": "Dependabot PR Generator for proprietary plugins",
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/runner.png",
+        "assets/stop.jpg"
       ],
-      "action": {
-        "default_icon": {
-          "16": "assets/ext-icon.png",
-          "24": "assets/ext-icon.png",
-          "32": "assets/ext-icon.png"
-        },
-        "default_title": "Dependabot PR Generator",
-        "default_popup": "dependabotPR.html"
-      },
-      "manifest_version": 3
+      "matches": [
+        "https://*.google.com/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/ext-icon.png",
+      "24": "assets/ext-icon.png",
+      "32": "assets/ext-icon.png"
+    },
+    "default_title": "Dependabot PR Generator",
+    "default_popup": "dependabotPR.html"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "manifest_version": 3
 }
