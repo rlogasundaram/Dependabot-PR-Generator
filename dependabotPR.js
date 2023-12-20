@@ -4,8 +4,10 @@ async function fetchData(repoPlugin) {
     const headers = {
       'Authorization': `token ${gitOptions.TOKEN}`,
     };
+
     let apiURL;
     if (repoPlugin.includes("cloudbees")) { //proprietary plugins
+      
       apiURL = `${gitAPI.url}/${repoPlugin}/pulls`;
       fetch(`${apiURL}`, {
         method: 'GET', headers: new Headers({
@@ -28,6 +30,7 @@ async function fetchData(repoPlugin) {
           return "Unexpected error: Please check the log: ", error;
         });
     } else { //oss plugins
+
       apiURL = `${gitAPI.url}/${repoPlugin}/pulls`;
       fetch(`${apiURL}`, { method: 'GET' })
         .then(response => {
@@ -42,8 +45,6 @@ async function fetchData(repoPlugin) {
           return "Unexpected error: Please check the log: ", error;
         });
     }
-
-
   })
 }
 /*
@@ -122,32 +123,36 @@ run.addEventListener('click', async () => {
   if (tabactive == 'cloudbees') {
     let dependabotPRs = [];
 
-    document.getElementById("cloudbees").style.display = "block";
-    loadSpinner.style.display = "block";
-    exportPR.disabled = false;
-
-    console.log("cloudbeesplugin: ", gaiaPluginJson);
-    for (let repo = 0; repo < gaiaPluginJson.cloudbees.length; repo++) {
-
-      dependabotPRs = await fetchData(gaiaPluginJson.cloudbees[repo]);
-      if (dependabotPRs != null || dependabotPRs != '' || !dependabotPRs.status == 404) {
-        // pick only the dependabot PRS from the response
-        for (let i = 0; i < dependabotPRs.length; i++) {
-          if (dependabotPRs[i].user.login == "dependabot[bot]") {
-            cloudbeeslist.innerHTML += '<a href="' + dependabotPRs[i].html_url + '" target="_blank">"' + dependabotPRs[i].html_url + '"</a></br>';
-            cloudbeesListViewResult.push(dependabotPRs[i].html_url);
-          }
-        }
-        cloudbeeslist.style.display = "block";
-        exportPR.disabled = false;
-        //store the proprietary list in local storage
-        localStorage.setItem("proprietary", JSON.stringify(cloudbeesListViewResult));
-      } else {
-        cloudbeeslist.style.display = "none";
-        loadSpinner.style.display = "none";
-      }
+    if (!gitOptions.TOKEN) {
+      alert("Please create a git personal access token to access Cloudbees plugin. Follow the ReadMe file !");
+    } else {
+      cloudbeeslist.style.display = "block";
       loadSpinner.style.display = "block";
-      exportPR.disabled = true;
+      exportPR.disabled = false;
+
+      console.log("cloudbeesplugin: ", gaiaPluginJson);
+      for (let repo = 0; repo < gaiaPluginJson.cloudbees.length; repo++) {
+
+        dependabotPRs = await fetchData(gaiaPluginJson.cloudbees[repo]);
+        if (dependabotPRs != null || dependabotPRs != '' || !dependabotPRs.status == 404) {
+          // pick only the dependabot PRS from the response
+          for (let i = 0; i < dependabotPRs.length; i++) {
+            if (dependabotPRs[i].user.login == "dependabot[bot]") {
+              cloudbeeslist.innerHTML += '<a href="' + dependabotPRs[i].html_url + '" target="_blank">"' + dependabotPRs[i].html_url + '"</a></br>';
+              cloudbeesListViewResult.push(dependabotPRs[i].html_url);
+            }
+          }
+          cloudbeeslist.style.display = "block";
+          exportPR.disabled = false;
+          //store the proprietary list in local storage
+          localStorage.setItem("proprietary", JSON.stringify(cloudbeesListViewResult));
+        } else {
+          cloudbeeslist.style.display = "none";
+          loadSpinner.style.display = "none";
+        }
+        loadSpinner.style.display = "block";
+        exportPR.disabled = true;
+      }
     }
     loadSpinner.style.display = "none";
     exportPR.disabled = false;
@@ -157,11 +162,11 @@ run.addEventListener('click', async () => {
   if (tabactive == 'oss') {
     let dependabotPRs = [];
 
-    document.getElementById("oss").style.display = "block";
+    console.log("ossPlugins: ", gaiaPluginJson);
+
+    osslist.style.display = "block";
     loadSpinner.style.display = "block";
     exportPR.disabled = false;
-
-    console.log("ossPlugins: ", gaiaPluginJson);
     for (let repo = 0; repo < gaiaPluginJson.oss.length; repo++) {
 
       dependabotPRs = await fetchData(gaiaPluginJson.oss[repo]);
@@ -187,7 +192,6 @@ run.addEventListener('click', async () => {
     loadSpinner.style.display = "none";
     exportPR.disabled = false;
   }
-
 });
 
 /* 
