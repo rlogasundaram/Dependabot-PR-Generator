@@ -7,7 +7,7 @@ async function fetchData(repoPlugin) {
 
     let apiURL;
     if (repoPlugin.includes("cloudbees")) { //proprietary plugins
-      
+
       apiURL = `${gitAPI.url}/${repoPlugin}/pulls`;
       fetch(`${apiURL}`, {
         method: 'GET', headers: new Headers({
@@ -22,7 +22,6 @@ async function fetchData(repoPlugin) {
           } else {
             return response.json();
             throw new Error(`Error: ${response.status}, ${response.statusText}`)
-
           }
         })
         .then(data => resolve(data))
@@ -124,7 +123,7 @@ run.addEventListener('click', async () => {
     let dependabotPRs = [];
 
     if (!gitOptions.TOKEN) {
-      alert("Please create a git personal access token to access Cloudbees plugin. Follow the ReadMe file !");
+      alert("Please create a git personal access token to access Cloudbees Proprietary plugin. Follow the ReadMe file !");
     } else {
       cloudbeeslist.style.display = "block";
       loadSpinner.style.display = "block";
