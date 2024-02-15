@@ -18,7 +18,11 @@ https://cloudbees.atlassian.net/jira/software/c/projects/OPS/boards/892
 
 2. Checkout the Dependabot Generator project code from the git repo in local machine:
    https://github.com/rlogasundaram/Dependabot-PR-Generator
-3. Open your chrome browser with a new tab and paste the below link:
+
+3. Open the project code in your editor and open the config.js file and paste your git token.
+   ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/3521eec6-41d3-49ca-a008-39aba06d1107)
+  
+4. Open your chrome browser with a new tab and paste the below link:
    
    chrome://extensions/
    
@@ -26,13 +30,13 @@ https://cloudbees.atlassian.net/jira/software/c/projects/OPS/boards/892
    
    ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/87d1fe45-82c7-4bc2-bb8d-af657ddda707)
 
-4. In your chrome browser tab, click the "Load unpacked" button and select this dependabot project code folder. It will load this code into your chrome browser.
+5. In your chrome browser tab, click the "Load unpacked" button and select this dependabot project code folder. It will load this code into your chrome browser.
 
    ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/c3a0f5cd-1bba-484b-890c-dbc2af5529ed)
    ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/77c7b7ef-85cc-4c30-ac51-4e6aa4dfb776)
 
 
-5. After loading the code successfully. Open your browser again and click the extension button in top right corner of your browser.
+6. After loading the code successfully. Open your browser again and click the extension button in top right corner of your browser. The extension will open and you can fetch the PRs.
    
    ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/1fbca001-2819-4fcb-8815-144b431645a8)
 
