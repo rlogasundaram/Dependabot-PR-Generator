@@ -6,7 +6,8 @@ This portable custom chrome browser extension will help us to fetch the open dep
 
    ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/af158b44-7cbe-4971-93a5-e9072769a934)
 
-Steps to generate the git token for Cloudbees proprietary plugin. For OSS plugin we don't need any special access
+**Steps to generate the git token for Cloudbees proprietary plugin. For OSS plugin we don't need any special access**
+
 1. Go to the settings page in github : https://github.com/settings/apps
    Click the Personal Access Token -> Fine-grained tokens -> Generate New Token.
    
