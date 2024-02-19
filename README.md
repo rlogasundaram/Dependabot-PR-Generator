@@ -43,6 +43,10 @@ https://cloudbees.atlassian.net/jira/software/c/projects/OPS/boards/892
 
    
 
-   
+
+7. The Dependabot PR Generator extension will open. You can fetch the open PRs by using this custom extension.
+
+   ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/1007bbdf-5619-4773-9cf6-9f7b93a3c3de)
+
 
    
