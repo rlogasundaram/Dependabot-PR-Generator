@@ -2,9 +2,10 @@ Dependabot PR Generator.
 
 This portable custom chrome browser extension will help us to fetch the open dependabot PR from proprietary and OSS plugins for Gaia
 
-1. **How it works after enabling the extension in chrome browser:**
+1. **How does the extension looks like and how it works after enabling the extension in chrome browser:**
 
-   ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/af158b44-7cbe-4971-93a5-e9072769a934)
+   ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/2af6fe13-8a87-4caf-b46a-48d0dc06ffee)
+
 
 **Steps to generate the git token for Cloudbees proprietary plugin. For OSS plugin we don't need any special access**
 
@@ -14,8 +15,8 @@ This portable custom chrome browser extension will help us to fetch the open dep
    **Note: Once create the token, copy the token and save it in your local file.**
    ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/da467027-2937-4834-8ac1-0ff769e9f472)
 
-After creating a new token. We need to raise the request to ops team to get the approval for this token. Because, we have created the token for "Cloudbees owner". So, we need approval from the ops team. Create a ticket in their kanban board. Make sure you get the approval from them.
-https://cloudbees.atlassian.net/jira/software/c/projects/OPS/boards/892
+   After creating a new token. We need to raise the request to ops team to get the approval for this token. Because, we have created the token    for "Cloudbees owner". So, we need approval from the ops team. Create a ticket in their kanban board. Make sure you get the approval from      them.
+   https://cloudbees.atlassian.net/jira/software/c/projects/OPS/boards/892
 
 2. Checkout the Dependabot Generator project code from the git repo in local machine:
    https://github.com/rlogasundaram/Dependabot-PR-Generator
@@ -25,26 +26,29 @@ https://cloudbees.atlassian.net/jira/software/c/projects/OPS/boards/892
   
 4. Open your chrome browser with a new tab and paste the below link:
    
-   chrome://extensions/
+   **chrome://extensions/**
    
    Make sure the developer mode is on
    
    ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/87d1fe45-82c7-4bc2-bb8d-af657ddda707)
 
-5. In your chrome browser tab, click the "Load unpacked" button and select this dependabot project code folder. It will load this code into your chrome browser.
+5. In your chrome browser tab, click the "Load unpacked" button and select this dependabot project code folder. It will load this code into    
+   your chrome browser.
 
    ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/c3a0f5cd-1bba-484b-890c-dbc2af5529ed)
    ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/77c7b7ef-85cc-4c30-ac51-4e6aa4dfb776)
 
 
-6. After loading the code successfully. Open your browser again and click the extension button in top right corner of your browser. The extension will open and you can fetch the PRs.
+6. After loading the code successfully. Open your browser again and click the extension button in top right corner of your browser. The 
+   extension will open and you can fetch the PRs.
    
    ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/1fbca001-2819-4fcb-8815-144b431645a8)
 
    
 
 
-7. The Dependabot PR Generator extension will open. You can fetch the open PRs by using this custom extension.
+7. The Dependabot PR Generator extension will open. You can fetch all the open PRs by using this custom extension by click the Green Run 
+   button for both proprietary and OSS plugins.
 
    ![image](https://github.com/rlogasundaram/Dependabot-PR-Generator/assets/142486073/1007bbdf-5619-4773-9cf6-9f7b93a3c3de)
 
